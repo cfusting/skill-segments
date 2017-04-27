@@ -1,0 +1,3 @@
+This directory contains scripts related to the analysis of the LDA model. The report 
+was built entirely using the scripts in this directory. Note they often call on models
+and data stored elsewhere.

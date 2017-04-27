@@ -1,0 +1,24 @@
+DEVELOPMENT ENVIRONMENT
+The code and data in this folder represent the entirety of the necessary resources
+to build skill-segments. Software is written in R (for analysis) and SQL (to pull
+data). The author develops in a Linux environment both on his home workstation and
+the Amazon's EC2 cloud. 
+
+RUNNING SCRIPTS
+This is the root directory for all skill-segment scripts. Most scripts will access
+files relative to this directory. Depending on how you run the scripts you may
+wish to set an environment variable or manually set the working directory in RStudio.
+
+Some R scripts are meant to be run interactivley and will plot results during their
+execution. These scripts often depend on a variables "model" which can be obtained from 
+one of the many scripts that build an LDA model (VEM or Gibbs) using the "topicmodels"
+package.
+
+SQL scripts are designed to be run from inside psql using the '\i' command. Some can
+take time to execute and thus 'screen' is recommended such that the user can detach
+from the process.
+
+Scripts that build models, especially those that perform cross-validation, can take a 
+very long time to run even on a powerful workstation. The author recommends launching
+these on Amazon's EC2 cloud. Specifically the VEM cross-validation scripts eat up about
+10 GB of memory a piece and thus a memory optimized instance is recommended.
